@@ -1,0 +1,33 @@
+mod.wizards {
+    newContentElement {
+        wizardItems {
+            common {
+                elements {
+                    sitepackage_slider {
+                        iconIdentifier = content-image
+                        title = Slider
+                        description = Slider Element
+                        tt_content_defValues {
+                            CType = sitepackage_slider
+                        }
+                    }
+                }
+                show := addToList(sitepackage_slider)
+            }
+        }
+    }
+}
+
+mod.web_layout.tt_content.preview.site_package_slider = EXT:site_package/Resources/Private/Templates/BackendPreviews/ContentElements/BE_slider.html
+
+TCEFORM {
+    tt_content {
+        frame_class {
+            types {
+                site_package_slider {
+                    disabled = 1
+                }
+            }
+        }
+    }
+}

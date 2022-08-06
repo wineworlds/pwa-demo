@@ -1,0 +1,27 @@
+tt_content.sitepackage_slider =< lib.contentElement
+tt_content.sitepackage_slider {
+    fields {
+        content {
+            fields {
+                header = TEXT
+                header {
+                    field = header
+                }
+                assets = TEXT
+                assets {
+                    dataProcessing {
+                        10 = FriendsOfTYPO3\Headless\DataProcessing\FilesProcessor
+                        10 {
+                            references.fieldName = image
+                            as = images
+                        }
+                    }
+                }
+                gradient = INT
+                gradient {
+                    field = gradient
+                }
+            }
+        }
+    }
+}
